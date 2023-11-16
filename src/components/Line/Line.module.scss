@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+
+  & > div:first-child {
+    width: 66px;
+    flex-shrink: 0;
+    padding-right: 22px;
+    color: #6e7681;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    user-select: none;
+  }
+
+  &:hover {
+    & > div {
+      color: #ccc;
+    }
+  }
+
+  & div[data-tab] {
+    position: relative;
+    height: 100%;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      border-left: 1px solid rgb(255 255 255 / 40%);
+      color: rgb(255 255 255 / 9%);
+      content: "";
+    }
+  }
+
+  & div[data-tab="1"] {
+    padding-left: 16px;
+
+    &::before {
+      content: "··";
+    }
+  }
+}

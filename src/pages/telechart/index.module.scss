@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  overflow: auto;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  color: #1f1f1f;
+  font-size: 12px;
+  font-weight: 400;
+
+  &_dark {
+    background-color: #1f1f1f;
+    color: #fff;
+
+    & :global(.tc-tooltip) {
+      border: 1px solid #56626d;
+      background-color: #1f1f1f;
+    }
+
+    & :global(.tc-control) {
+      border: 1px solid #56626d;
+    }
+  }
+
+  & h2 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  & h3 {
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+
+  & footer {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+
+  & a {
+    color: #3c9ede;
+  }
+
+  :global(.tc-range) {
+    width: 170px;
+
+    & > div {
+      width: 78px;
+    }
+  }
+}
+
+.switch {
+  margin-bottom: 60px;
+  color: #3c9ede;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+
+.chart {
+  width: 500px;
+  margin-bottom: 40px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__header h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.hint {
+  color: gray;
+  font-size: 10px;
+}
