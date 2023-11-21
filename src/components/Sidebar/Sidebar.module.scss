@@ -4,6 +4,19 @@
   border-right: 1px solid #2a2a2a;
   background-color: #181818;
   font-size: 11px;
+
+  @media (width <= 768px) {
+    position: absolute;
+    z-index: 1;
+    left: 49px;
+    width: 220px;
+    transform: translateX(-300px);
+    transition: transform ease-in-out 200ms;
+
+    &_visible {
+      transform: translateX(0);
+    }
+  }
 }
 
 .headline {
@@ -19,27 +32,29 @@
   line-height: 22px;
   text-transform: uppercase;
 
-  &::before {
+  :global(.icon) {
     margin: 0 4px 0 5px;
   }
 }
 
 .navigation {
-  & > nav {
+  & > a {
     display: flex;
     align-items: center;
     padding-left: 18px;
+    color: #ccc;
     cursor: pointer;
     font-size: 13px;
     gap: 6px;
     line-height: 22px;
+    text-decoration: none;
   }
 
-  & > nav:first-child {
+  & > a.active {
     background-color: #37373d;
   }
 
-  & > nav:hover:not(:first-child) {
+  & > a:hover:not(.active) {
     background-color: #2a2d2e;
   }
 }

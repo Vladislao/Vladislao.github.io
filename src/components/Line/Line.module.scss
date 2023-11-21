@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  max-width: 650px;
 
   & > div:first-child {
     width: 66px;
@@ -9,6 +10,10 @@
     font-variant-numeric: tabular-nums;
     text-align: right;
     user-select: none;
+
+    @media (width <= 425px) {
+      width: 0;
+    }
   }
 
   &:hover {
@@ -32,7 +37,7 @@
   }
 
   & div[data-tab="1"] {
-    padding-left: 16px;
+    padding-left: 18px;
 
     &::before {
       content: "··";

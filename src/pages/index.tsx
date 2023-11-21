@@ -6,10 +6,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Vladislav Stroev CV</title>
-        <meta name="description" content="" />
+        <title>Vladislav Stroev</title>
+        <meta
+          name="description"
+          content="Fullstack Developer with a Master's in Computer Science, expert in Typescript, Javascript, Node.js, React, and backend architecture."
+        />
       </Head>
-      <main>
+      <main style={{ flexGrow: 1 }}>
         <Editor>
           <>About</>
           <></>

@@ -10,7 +10,7 @@ export type LineProps = {
 const Line = ({ lineNumber, children }: LineProps) => {
   return (
     <div className={cl.container}>
-      <div>{lineNumber}</div>
+      <div aria-hidden="true">{lineNumber}</div>
       <div>{children}</div>
     </div>
   );

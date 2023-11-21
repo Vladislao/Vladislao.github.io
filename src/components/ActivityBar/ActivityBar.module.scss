@@ -1,16 +1,65 @@
 .container {
+  z-index: 2;
   display: flex;
   height: 100%;
   flex: 0 0 48px;
   flex-direction: column;
   flex-shrink: 0;
-  padding: 12px;
   border-right: 1px solid #2a2a2a;
   background-color: #181818;
-  gap: 24px;
+}
 
-  & > svg {
+.link {
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  cursor: pointer;
+
+  & svg {
     width: 24px;
     height: 24px;
+  }
+
+  & path[data-highlight="fill"] {
+    transition: fill ease-in-out 100ms;
+  }
+
+  & path[data-highlight="stroke"] {
+    transition: stroke ease-in-out 100ms;
+  }
+
+  &_active,
+  &:hover {
+    & path[data-highlight="stroke"] {
+      stroke: #d7d7d7;
+    }
+
+    & path[data-highlight="fill"] {
+      fill: #d7d7d7;
+    }
+  }
+
+  &_selected {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      background-color: #0078d4;
+      content: "";
+    }
+
+    @media (width > 768px) {
+      & path[data-highlight="stroke"] {
+        stroke: #d7d7d7;
+      }
+
+      & path[data-highlight="fill"] {
+        fill: #d7d7d7;
+      }
+    }
   }
 }

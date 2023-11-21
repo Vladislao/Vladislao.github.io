@@ -5,65 +5,6 @@ import telechart from "telechart";
 
 import cl from "./index.module.scss";
 
-const fetchData = function (path: string) {
-  return fetch("/data/telechart/" + path).then(function (response) {
-    return response.json();
-  });
-};
-
-// Compose your DOM tree as you like
-const customMount = (target: Element, name: string, hintText: string) => {
-  return (components: any) => {
-    target.classList.add("tc-wrapper");
-
-    const headerWrapper = document.createElement("div");
-    headerWrapper.className = cl.chart__header;
-
-    const header = document.createElement("h3");
-    header.appendChild(document.createTextNode(name));
-    headerWrapper.appendChild(header);
-    headerWrapper.appendChild(components.range);
-
-    target.appendChild(headerWrapper);
-    target.appendChild(components.view);
-    if (hintText) {
-      const hint = document.createElement("div");
-      hint.className = cl.hint;
-      hint.appendChild(document.createTextNode(hintText));
-      target.appendChild(hint);
-    }
-    target.appendChild(components.preview);
-    if (components.controls) target.appendChild(components.controls);
-  };
-};
-
-// Some common theme settings
-const setCommonTheme = (day: boolean, engine: any, state: any) => {
-  state.window.mask.color.hex = day ? "#E2EEF9" : "#304259";
-  state.window.mask.color.alpha = 0.6;
-  state.window.tracker.color.hex = day ? "#C0D1E1" : "#56626D";
-  state.window.tracker.color.alpha = 1;
-  state.tooltip.color.hex = day ? "#182D3B" : "#FFFFFF";
-  state.tooltip.color.alpha = 0.1;
-  state.tooltip.lighten = day ? true : false;
-  state.grid.color.hex = day ? "#182D3B" : "#FFFFFF";
-  state.grid.color.alpha = 0.1;
-};
-
-const setLineTheme = (day: boolean, engine: any, state: any) => {
-  state.axis.x.color.hex = day ? "#8E8E93" : "#A3B1C2";
-  state.axis.x.color.alpha = day ? 1 : 0.6;
-  state.axis.y.color.hex = day ? "#8E8E93" : "#A3B1C2";
-  state.axis.y.color.alpha = day ? 1 : 0.6;
-};
-
-const setBarTheme = (day: boolean, engine: any, state: any) => {
-  state.axis.x.color.hex = day ? "#252529" : "#A3B1C2";
-  state.axis.x.color.alpha = day ? 0.5 : 0.6;
-  state.axis.y.color.hex = day ? "#252529" : "#ECF2F8";
-  state.axis.y.color.alpha = 0.5;
-};
-
 export default function Telechart() {
   const [day, setDay] = useState(false);
   const initialized = useRef<boolean>(false);
@@ -71,6 +12,64 @@ export default function Telechart() {
 
   useEffect(() => {
     if (initialized.current) return;
+
+    const fetchData = function (path: string) {
+      return fetch("/data/telechart/" + path).then(function (response) {
+        return response.json();
+      });
+    };
+
+    // Some common theme settings
+    const setCommonTheme = (day: boolean, engine: any, state: any) => {
+      state.window.mask.color.hex = day ? "#E2EEF9" : "#304259";
+      state.window.mask.color.alpha = 0.6;
+      state.window.tracker.color.hex = day ? "#C0D1E1" : "#56626D";
+      state.window.tracker.color.alpha = 1;
+      state.tooltip.color.hex = day ? "#182D3B" : "#FFFFFF";
+      state.tooltip.color.alpha = 0.1;
+      state.tooltip.lighten = day ? true : false;
+      state.grid.color.hex = day ? "#182D3B" : "#FFFFFF";
+      state.grid.color.alpha = 0.1;
+    };
+
+    const setLineTheme = (day: boolean, engine: any, state: any) => {
+      state.axis.x.color.hex = day ? "#8E8E93" : "#A3B1C2";
+      state.axis.x.color.alpha = day ? 1 : 0.6;
+      state.axis.y.color.hex = day ? "#8E8E93" : "#A3B1C2";
+      state.axis.y.color.alpha = day ? 1 : 0.6;
+    };
+
+    const setBarTheme = (day: boolean, engine: any, state: any) => {
+      state.axis.x.color.hex = day ? "#252529" : "#A3B1C2";
+      state.axis.x.color.alpha = day ? 0.5 : 0.6;
+      state.axis.y.color.hex = day ? "#252529" : "#ECF2F8";
+      state.axis.y.color.alpha = 0.5;
+    };
+
+    const customMount = (target: Element, name: string, hintText: string) => {
+      return (components: any) => {
+        target.classList.add("tc-wrapper");
+
+        const headerWrapper = document.createElement("div");
+        headerWrapper.className = cl.chart__header;
+
+        const header = document.createElement("h3");
+        header.appendChild(document.createTextNode(name));
+        headerWrapper.appendChild(header);
+        headerWrapper.appendChild(components.range);
+
+        target.appendChild(headerWrapper);
+        target.appendChild(components.view);
+        if (hintText) {
+          const hint = document.createElement("div");
+          hint.className = cl.hint;
+          hint.appendChild(document.createTextNode(hintText));
+          target.appendChild(hint);
+        }
+        target.appendChild(components.preview);
+        if (components.controls) target.appendChild(components.controls);
+      };
+    };
 
     fetchData("1/overview.json").then(function (json) {
       const setTheme = (day: boolean) => (engine: any, state: any) => {
@@ -188,26 +187,30 @@ export default function Telechart() {
     <>
       <Head>
         <title>Telechart Demo</title>
-        <meta name="description" content="" />
+        <meta
+          name="description"
+          content="Minimalistic charts without dependencies."
+        />
       </Head>
       <main className={cn(cl.container, { [cl.container_dark]: !day })}>
-        <h2>telechart.js</h2>
-        <h3>
-          Made for Stage 2 of the Telegram&apos;s Chart Coding Competition
-        </h3>
+        <h2>
+          <a href="https://github.com/Vladislao/telechart" target="_blank">
+            telechart
+          </a>
+        </h2>
+        <p>Made for Stage 2 of the Telegram&apos;s Chart Coding Competition</p>
         <div id="chart1" className={cl.chart}></div>
         <div id="chart2" className={cl.chart}></div>
         <div id="chart3" className={cl.chart}></div>
         <div id="chart4" className={cl.chart}></div>
         <div id="chart5" className={cl.chart}></div>
-        <div className={cl.switch} onClick={handleDayToggle}>
-          Switch to {day ? "Night" : "Day"} Mode
-        </div>
         <footer>
-          <div>
-            By <a href="https://github.com/vladislao">Vladislav Stroev</a>
+          <div className={cl.switch} onClick={handleDayToggle}>
+            Switch to {day ? "Night" : "Day"} Mode
           </div>
-          <a href="https://github.com/vladislao/telechart">sources</a>
+          <a href="https://github.com/vladislao/telechart" target="_blank">
+            sources
+          </a>
         </footer>
       </main>
     </>
