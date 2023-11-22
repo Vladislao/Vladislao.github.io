@@ -29,12 +29,12 @@ export default function Home() {
           <></>
           <>
             I am an experienced{" "}
-            <span className="hl_violet">Fullstack Web Developer</span> with over
-            ten years in the IT industry, starting in 2013. I hold a Specialist
-            Degree (equivalent to Master&apos;s Degree) in Information Systems
-            and Technologies and have developed a broad range of skills in both
-            frontend and backend development. My technical expertise centers
-            around{" "}
+            <span className="hl_violet">Full Stack Web Developer</span> with
+            over ten years in the IT industry, starting in 2013. I hold a
+            Specialist Degree (equivalent to Master&apos;s Degree) in
+            Information Systems and Technologies and have developed a broad
+            range of skills in both frontend and backend development. My
+            technical expertise centers around{" "}
             <span className="hl_blue">
               TypeScript, JavaScript, Node.js, and React
             </span>
