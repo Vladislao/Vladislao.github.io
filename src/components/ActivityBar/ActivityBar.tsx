@@ -1,8 +1,8 @@
 import React from "react";
 import cn from "classnames";
 
-import Hamburger from "./static/hamburger.svg";
-import FilesSVG from "./static/files.svg";
+import HamburgerSVG from "./static/hamburger.svg";
+import DownloadSVG from "./static/download.svg";
 import GitHubSVG from "./static/github.svg";
 import LinkedInSVG from "./static/linkedin.svg";
 import TelegramSVG from "./static/telegram.svg";
@@ -29,7 +29,7 @@ const ActivityBar = React.forwardRef<HTMLDivElement, ActivityBarProps>(
           })}
           onClick={onHamburgerClick}
         >
-          <Hamburger />
+          <HamburgerSVG />
         </div>
         <a
           className={cl.link}
@@ -61,6 +61,14 @@ const ActivityBar = React.forwardRef<HTMLDivElement, ActivityBarProps>(
           aria-label="Email"
         >
           <EmailSVG />
+        </a>
+        <a
+          className={cl.link}
+          href="/files/Vladislav Stroev CV.pdf"
+          aria-label="Download CV"
+          download={true}
+        >
+          <DownloadSVG />
         </a>
       </aside>
     );
