@@ -101,6 +101,10 @@
     padding-left: 20px;
     margin-top: 14px;
     list-style-type: disc;
+
+    li:not(:last-child) {
+      margin-bottom: 3px;
+    }
   }
 
   &__period {

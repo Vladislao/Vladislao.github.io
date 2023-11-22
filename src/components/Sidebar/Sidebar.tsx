@@ -37,7 +37,7 @@ const Sidebar = React.forwardRef<HTMLElement, SidebarProps>(function Sidebar(
           className={cn({
             [cl.active]: router.pathname === "/contacts",
           })}
-          href="/"
+          href="/contacts"
         >
           <span className="icon icon_pdf"></span>contacts
         </Link>
