@@ -17,10 +17,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Vladislav Stroev</title>
+        <title>Vladislav Stroev - Full Stack Developer</title>
         <meta
           name="description"
-          content="Fullstack Developer with a Master's in Computer Science, expert in Typescript, Javascript, Node.js, React, and backend architecture."
+          content="Full stack Web Developer since 2013 with expertise in TypeScript, JavaScript, Node.js, and React. Passionate about continuous learning and innovation in tech."
         />
       </Head>
       <main style={{ flexGrow: 1 }}>
@@ -101,7 +101,7 @@ export default function Home() {
           <div data-tab="1">Ulyanovsk Region, Russian Federation · Remote</div>
           <div data-tab />
           <div data-tab="1">
-            * Transitioned to fullstack development, balancing frontend and
+            * Transitioned to full stack development, balancing frontend and
             backend responsibilities. Involved in the full lifecycle of web
             application development of multiple{" "}
             <span className="hl_cyan">SaaS</span> products and{" "}

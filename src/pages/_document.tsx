@@ -16,7 +16,12 @@ export default function Document() {
           type="image/png"
           sizes="198x198"
         />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link
+          rel="shortcut icon"
+          href="favicon.ico"
+          type="image/x-icon"
+          sizes="any"
+        />
       </Head>
       <body>
         <Main />

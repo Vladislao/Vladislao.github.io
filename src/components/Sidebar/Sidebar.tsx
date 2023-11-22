@@ -20,7 +20,7 @@ const Sidebar = React.forwardRef<HTMLElement, SidebarProps>(function Sidebar(
       ref={ref}
       className={cn(cl.container, { [cl.container_visible]: isVisible })}
     >
-      <div className={cl.headline}>Fullstack Developer</div>
+      <div className={cl.headline}>Full Stack Developer</div>
       <div className={cl.title}>
         <span className="icon icon_chevron-down"></span>Vladislav Stroev
       </div>
@@ -54,15 +54,24 @@ const Sidebar = React.forwardRef<HTMLElement, SidebarProps>(function Sidebar(
         >
           <span className="icon icon_html"></span>telechart
         </Link>
-        <a href="https://github.com/Vladislao/proxy-supervisor" target="_blank">
+        <a
+          title="proxy-supervisor"
+          href="https://github.com/Vladislao/proxy-supervisor"
+          target="_blank"
+        >
           <span className="icon icon_ts"></span>proxy-supervisor
           <span className="icon icon_link"></span>
         </a>
-        <a href="https://github.com/Vladislao/bitfun" target="_blank">
+        <a
+          title="bitfun"
+          href="https://github.com/Vladislao/bitfun"
+          target="_blank"
+        >
           <span className="icon icon_js"></span>bitfun
           <span className="icon icon_link"></span>
         </a>
         <a
+          title="vladislao.github.io"
           href="https://github.com/Vladislao/vladislao.github.io"
           target="_blank"
         >

@@ -17,7 +17,7 @@ const resume = {
   email: "vladislaosan@gmail.com",
   telegram: "@vladislaosan",
   summary:
-    "Fullstack Web Developer since 2013 with expertise in TypeScript, JavaScript, Node.js, and React. Skilled in backend technologies and DevOps, passionate about continuous learning and innovation in tech.",
+    "Full stack Web Developer since 2013 with expertise in TypeScript, JavaScript, Node.js, and React. Skilled in backend technologies and DevOps, passionate about continuous learning and innovation in tech.",
   employment: [
     {
       title: "Full Stack Web Developer",
@@ -26,7 +26,7 @@ const resume = {
       to: "Present",
       site: ["tenderplan.ru", "https://tenderplan.ru"],
       description: [
-        "Transitioned to fullstack development, balancing frontend and backend responsibilities. Involved in the full lifecycle of web application development of multiple SaaS products and CRM system.",
+        "Transitioned to full stack development, balancing frontend and backend responsibilities. Involved in the full lifecycle of web application development of multiple SaaS products and CRM system.",
         "Played a key role in application redesign, utilizing a modern tech stack including TypeScript, React, Redux, Node.js, and MongoDB. This led to enhanced application performance and user experience, as noted by positive feedback from users.",
         "Developed and integrated critical features like OAuth 2.0 endpoints and optimized backend services using Node.js and Elixir, resulting in improved security, data handling capabilities, and a more streamlined user experience.",
         "Led a frontend team, managing recruitment, onboarding, and mentoring. Successfully integrated 10+ new hires into the team, ensuring effective team integration.",
@@ -119,10 +119,10 @@ export default function CV() {
   return (
     <>
       <Head>
-        <title>Vladislav Stroev</title>
+        <title>Vladislav Stroev - CV</title>
         <meta
           name="description"
-          content="Fullstack Developer with a Master's in Computer Science, expert in Typescript, Javascript, Node.js, React, and backend architecture."
+          content="Full stack Web Developer since 2013 with expertise in TypeScript, JavaScript, Node.js, and React. Passionate about continuous learning and innovation in tech."
         />
       </Head>
       <main className={cn(cl.container, roboto.className)}>

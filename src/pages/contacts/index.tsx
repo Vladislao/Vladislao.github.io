@@ -7,10 +7,10 @@ const Contacts = () => {
   return (
     <>
       <Head>
-        <title>Vladislav Stroev</title>
+        <title>Vladislav Stroev - Contacts</title>
         <meta
           name="description"
-          content="Fullstack Developer with a Master's in Computer Science, expert in Typescript, Javascript, Node.js, React, and backend architecture."
+          content="Feel free to contact me using your preferred method"
         />
       </Head>
       <main style={{ flexGrow: 1 }}>

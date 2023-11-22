@@ -35,6 +35,7 @@ const ActivityBar = React.forwardRef<HTMLDivElement, ActivityBarProps>(
           className={cl.link}
           href="https://github.com/vladislao"
           target="_blank"
+          title="GitHub"
           aria-label="GitHub"
         >
           <GitHubSVG />
@@ -43,6 +44,7 @@ const ActivityBar = React.forwardRef<HTMLDivElement, ActivityBarProps>(
           className={cl.link}
           href="https://www.linkedin.com/in/vladislav-stroev/?locale=en_US"
           target="_blank"
+          title="LinkedIn"
           aria-label="LinkedIn"
         >
           <LinkedInSVG />
@@ -51,6 +53,7 @@ const ActivityBar = React.forwardRef<HTMLDivElement, ActivityBarProps>(
           className={cl.link}
           href="https://t.me/vladislaosan"
           target="_blank"
+          title="Telegram"
           aria-label="Telegram"
         >
           <TelegramSVG />
@@ -58,6 +61,7 @@ const ActivityBar = React.forwardRef<HTMLDivElement, ActivityBarProps>(
         <a
           className={cl.link}
           href="mailto:vladislaosan@gmail.com"
+          title="Email"
           aria-label="Email"
         >
           <EmailSVG />
@@ -65,6 +69,7 @@ const ActivityBar = React.forwardRef<HTMLDivElement, ActivityBarProps>(
         <a
           className={cl.link}
           href="/files/Vladislav Stroev CV.pdf"
+          title="Download CV"
           aria-label="Download CV"
           download={true}
         >
