@@ -9,6 +9,10 @@
     "serve": "npx http-server ./out",
     "lint": "next lint"
   },
+  "browserslist": [
+    ">0.2%",
+    "not dead"
+  ],
   "dependencies": {
     "classnames": "^2.3.2",
     "date-fns": "^2.30.0",
