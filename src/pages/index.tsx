@@ -22,6 +22,7 @@ export default function Home() {
           name="description"
           content="Full stack Web Developer since 2013 with expertise in TypeScript, JavaScript, Node.js, and React. Passionate about continuous learning and innovation in tech."
         />
+        <link rel="canonical" href="https://vladislao.github.io" />
       </Head>
       <main style={{ flexGrow: 1 }}>
         <Editor>

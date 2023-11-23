@@ -119,11 +119,12 @@ export default function CV() {
   return (
     <>
       <Head>
-        <title>Vladislav Stroev - CV</title>
+        <title>Vladislav Stroev - Curriculum vitae</title>
         <meta
           name="description"
           content="Full stack Web Developer since 2013 with expertise in TypeScript, JavaScript, Node.js, and React. Passionate about continuous learning and innovation in tech."
         />
+        <link rel="canonical" href="https://vladislao.github.io/cv" />
       </Head>
       <main className={cn(cl.container, roboto.className)}>
         <div>

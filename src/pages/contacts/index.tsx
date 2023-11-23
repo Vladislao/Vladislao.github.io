@@ -12,6 +12,7 @@ const Contacts = () => {
           name="description"
           content="Feel free to contact me using your preferred method"
         />
+        <link rel="canonical" href="https://vladislao.github.io/contacts" />
       </Head>
       <main style={{ flexGrow: 1 }}>
         <Editor>
@@ -24,6 +25,8 @@ const Contacts = () => {
           <>
             LinkedIn: https://www.linkedin.com/in/vladislav-stroev/?locale=en_US
           </>
+          <>CV: https://vladislao.github.io/files/Vladislav%20Stroev%20CV.pdf</>
+          <></>
           <></>
           <></>
         </Editor>

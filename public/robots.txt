@@ -4,3 +4,4 @@ Disallow: /google66d9ff90326e1e93
 Disallow: /yandex_877b58354ea55be4
 
 Host: vladislao.github.io
+Sitemap: https://vladislao.github.io/sitemap.xml

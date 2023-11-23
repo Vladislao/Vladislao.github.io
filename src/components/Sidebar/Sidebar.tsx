@@ -20,7 +20,7 @@ const Sidebar = React.forwardRef<HTMLElement, SidebarProps>(function Sidebar(
       ref={ref}
       className={cn(cl.container, { [cl.container_visible]: isVisible })}
     >
-      <div className={cl.headline}>Full Stack Developer</div>
+      <h1 className={cl.headline}>Full Stack Developer</h1>
       <div className={cl.title}>
         <span className="icon icon_chevron-down"></span>Vladislav Stroev
       </div>

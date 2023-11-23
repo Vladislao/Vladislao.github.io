@@ -191,6 +191,7 @@ export default function Telechart() {
           name="description"
           content="Minimalistic charts without dependencies."
         />
+        <link rel="canonical" href="https://vladislao.github.io/telechart" />
       </Head>
       <main className={cn(cl.container, { [cl.container_dark]: !day })}>
         <h2>
